@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class ContadorDePassos {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        int passos = 0;
+
+        while (true) {
+            System.out.println("Digite 1 para dar um passo ou 0 para sair:");
+            int opcao = input.nextInt();
+
+            if (opcao == 1) {
+                passos++;
+                System.out.println("Você deu " + passos + " passo(s).");
+            } else if (opcao == 0) {
+                System.out.println("Contagem de passos finalizada. Total de passos: " + passos);
+                break;
+            } else {
+                System.out.println("Opção inválida. Digite 1 para dar um passo ou 0 para sair.");
+            }
+        }
+
+        input.close();
+    }
+}
